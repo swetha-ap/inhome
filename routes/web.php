@@ -20,3 +20,4 @@ route::view('/' , 'master');
 route::view('h' , 'home')->name('home');
 route::view('a' , 'about')->name('about');
 route::view('c' , 'logincustomer');
+route::view('cs' , 'customer');

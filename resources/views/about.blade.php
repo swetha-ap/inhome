@@ -21,13 +21,19 @@
            background-repeat: no-repeat;
        }
    </style>
-  
-     <h1 >About Us</h1>
-     <div class="grid" >
-         <div style=" padding-left: 50px;">
+      <div class="row">
+        <div class="mx-auto" >
+          <h1>About Us</h1></div>
+      </div>
+      <div class="row">
+        <div class="col" ></div>
+      </div>
+     <div class="container-fluid" >
+         <div class="row" style="height: 500px;">
+         <div class="col-6" style=" padding-left: 50px;">
         <img src="{{ asset ('images/about.webp') }}">
         </div>
-        <div class="one" style="width:500px;">
+        <div class=" col-6" >
              
             <p>IN-HOME Services is an online platform that provides home services across India.</p>
             <p>Key findings in the National Center for Health Statistics (NCHS) Data Brief, <br /> 
@@ -42,7 +48,7 @@
         
             <p>We also aim to provide job oppurtunities to professionals to deliver their services at home.</p>
         </div>
-       
+       </div>
     </div>
       
     

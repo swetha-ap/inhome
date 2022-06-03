@@ -1,44 +1,53 @@
 @extends('master')
 @section('content')
 <style>
-    #bg1{
-        height: 700px;
-        background-image: linear-gradient(to bottom right, rgb(53, 31, 67) , rgb(96, 92, 96), rgb(143, 229, 190));
-        /* background-image: linear-gradient(to bottom left,  rgb(143, 229, 190)); */
+    .bgcolor{
+        background-image: linear-gradient(to bottom right,rgb(32, 32, 83) ,rgb(99, 99, 173),green);
     }
 </style>
-<div id="bg1" class="container" >
-    <div class="row">
-        <div class="col-12" style="height:200px ;" ></div>
+<section class="vh-100 bgcolor" >
+<div  class="container" style="height: 500px;">
+   
+    <div class="row" height="200px">
+        <div class="col"><br /></div>
     </div>
-    <div class="row">
-      <div class="mx-auto" >
-        <h4 style="color: white ;">CUSTOMER LOGIN</h4></div>
+    <div class="row justify-content-center align-items-center ">
+        <div class="col-2"></div>
+       <div class="col">
+           <div class="card" style="width: 800px;">
+               <div class="row justify-content-center align-items-center">
+                   <div class="col-3" style="height:200px ;">
+                    <img src="images/c1.jfif" class="card-img-top img-fluid" style="height: 200px;">
+                   </div>
+                   <div class="col-2"></div>
+                       <div class="card-body">
+                           
+                        <div class="col-6">
+                            <form>
+                                <h3>IN HOME</h3>
+                                <br/>
+                                <h5>Log in to your Account</h5><br />
+                                <div class="form-group form-outline">
+                                    <label for="clientemail">Email address</label>
+                                    <input type="email" class="form-control" id="clientemail">
+                                </div>
+                                <div class="form-group form-outline">
+                                    <label for="clientpassword">Password</label>
+                                    <input type="password" class="form-control" id="clientpassword">
+                                </div>
+                                <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Log In</button>
+                                </div>
+                                <a class="small text-muted" href="">Forgot password?</a>
+                                <p>Dont have an account? <a href="">Sign Up</a></p>
+                            </form>
+                        </div>
+                       </div>
+                   </div>
+               </div>
+              
+           </div>
+       </div>
     </div>
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-1">
-            <img src="{{ asset ('images/user.png') }}" class="img-fluid ">
-        </div>
-        <div class="col-3">
-        <form>
-            <input type="text" placeholder="Username" id="">
-        </form>
-        </div>
-        
-    </div>
-    <div class="row">
-      <div class="col-4"></div>
-      <div class="col-1">
-            <img src="{{ asset ('images/password.png') }}" class="img-fluid mx-auto d-block ">
-      </div>
-      <div class="col-3">
-            <form>
-            <input type="password" placeholder="Password" id="">
-        </form>
-      </div>
-       
-    </div>
-            
-</div>
+   </section>
 @endsection
