@@ -87,7 +87,7 @@
           Log In
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Client</a>
+          <a class="dropdown-item" href="{{ route ('logincustomer') }}">Client</a>
           <a class="dropdown-item" href="#">Service Provider</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Admin</a>
