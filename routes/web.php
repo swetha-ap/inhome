@@ -20,5 +20,5 @@ route::view('/' , 'master');
 route::view('h' , 'home')->name('home');
 route::view('a' , 'about')->name('about');
 route::view('c' , 'logincustomer')->name('logincustomer');
-route::view('cs' , 'customer');
+route::view('s' , 'service');
 route::view('ss' , 'signupservice');
