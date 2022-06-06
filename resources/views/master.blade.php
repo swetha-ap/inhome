@@ -77,21 +77,24 @@
         <a class="nav-link" href="{{ route ('about') }}">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#1">Services</a>
+        <a class="nav-link" href="{{ route ('service') }}">Services</a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="">Sign Up</a>
       </li> -->
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
           Log In
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{ route ('logincustomer') }}">Client</a>
-          <a class="dropdown-item" href="#">Service Provider</a>
+          <a class="dropdown-item" href="{{ route ('login') }}">Client</a>
+          <a class="dropdown-item" href="{{ route ('login') }}">Service Provider</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Admin</a>
         </div>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route ('login') }}">Log In</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -99,8 +102,8 @@
           Sign Up
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Client</a>
-          <a class="dropdown-item" href="#">Service Provider</a>
+          <a class="dropdown-item" href="{{ route ('signupcustomer') }}">Client</a>
+          <a class="dropdown-item" href="{{ route ('signupservice') }}">Service Provider</a>
         </div>
       </li>
       
@@ -108,6 +111,18 @@
     
   </div>
 </nav>
+                           <!-- BREADCRUMBS -->
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ route ('home') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route ('about') }}">About</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="{{ route ('service') }}">Services</a></li>
+      </ol>
+    </nav>
+  </div>
+</nav> -->
    <div>
     @yield('content')
     </div>

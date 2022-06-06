@@ -8,38 +8,37 @@
 </style>
 <div class="container-fluid" style=" background-image: url('images/ss.png'); height: 1000px;">
     <div class="row">
-        <div class="col" style="height: 50px;"></div>
+        <div class="col" style="height: 30px;"></div>
     </div>
     <div class="row  d-flex justify-content-center align-items-center ">
         <div class="col">
-            <h1 style="font-family: cursive; color: rgb(160, 10, 98);" align="center">BE THE SERVICE PROVIDER</h1>
+            <h1 style="font-family: cursive; color: rgb(160, 10, 98);" align="center">Welcome User</h1>
         </div>
     </div>
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-12">
                     <div class="row">
-                        <div class="col" style="height: 110px;"></div>
+                        <div class="col" style="height: 70px;"></div>
                     </div>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col">
                         <form>
                             <div class="form-group  row  ">
-                                <div class="col-2"></div>
-                                <label for="spfname" class="col-3 col-form-label">First Name</label>
-                                <input type="text" class="form-control col-5" id="spfname" placeholder="First name">
+                                <div class="col-4"></div>
+                                <label for="cfname" class="col-2 col-form-label">First Name</label>
+                                <input type="text" class="form-control col-3" id="cfname" placeholder="First name">
                             </div>
                             <div class="form-group  row  ">
-                                <div class="col-2"></div>
-                                <label for="splname" class="col-3 col-form-label">Last Name</label>
-                                <input type="text" class="form-control col-5" id="splname" placeholder="Last name">
+                                <div class="col-4"></div>
+                                <label for="clname" class="col-2 col-form-label">Last Name</label>
+                                <input type="text" class="form-control col-3" id="clname" placeholder="Last name">
                             </div>
                             <div class="form-group  row  ">
-                                <div class="col-2"></div>
+                                <div class="col-4"></div>
                                 <div class="col-2">
                                     <h6>Gender</h6>
                                 </div>
-                                <div class="col-1"></div>
-                                <div class="col-6">
+                                <div class="col-2">
                                     <div class="form-check form-check-inline mb-0 me-4">
                                         <input class="form-check-input" type="radio" name="gender" id="femaleGender"
                                             value="option1" />
@@ -60,25 +59,25 @@
                                 </div>
                             </div>
                             <div class="form-group  row  ">
-                                <div class="col-2"></div>
-                                <label for="spemail" class="col-3 col-form-label">Email ID</label>
-                                <input type="email" class="form-control col-5" id="spemail"
+                                <div class="col-4"></div>
+                                <label for="cemail" class="col-2 col-form-label">Email ID</label>
+                                <input type="email" class="form-control col-3" id="cemail"
                                     placeholder="Enter Email Address">
                             </div>
                             <div class="form-group  row  ">
-                                <div class="col-2"></div>
-                                <label for="spmobile" class="col-3 col-form-label">Mobile No.</label>
-                                <input type="text" class="form-control col-5" id="spmobile">
+                                <div class="col-4"></div>
+                                <label for="cmobile" class="col-2 col-form-label">Mobile No.</label>
+                                <input type="text" class="form-control col-3" id="cmobile">
                             </div>
                             <div class="form-group  row  ">
-                                <div class="col-2"></div>
-                                <label for="spaddress" class="col-3 col-form-label">Address</label>
-                                <input type="textarea" class="form-control col-5" id="spaddress">
+                                <div class="col-4"></div>
+                                <label for="caddress" class="col-2 col-form-label">Address</label>
+                                <input type="textarea" class="form-control col-3" id="caddress">
                             </div>
                             <div class="form-group row">
-                                <div class="col-2"></div>
-                                <div class="col-5">
-                                    <select class="form-control custom-select " id="spstate" required>
+                                <div class="col-4"></div>
+                                <div class="col-3">
+                                    <select class="form-control custom-select " id="cstate" required>
                                         <option value="State">State</option>
                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                                         <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -118,73 +117,54 @@
                                         <option value="West Bengal">West Bengal</option>
                                     </select>
                                 </div>
-                                <div class="col-3">
-                                    <select class="form-control custom-select " id="spcity" required>
+                                <div class="col-2">
+                                    <select class="form-control custom-select " id="ccity" required>
                                         <option value="City">City</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group  row  ">
-                                <div class="col-2"></div>
-                                <label for="sppincode" class="col-2 col-form-label">Pincode</label>
-                                <input type="text" class="form-control col-5" id="sppincode">
-                            </div>
-
-
-                        </form>
-                    </div>
-                    <div class="col-6">
-                        <form>
-
-                            <div class="form-group  row  ">
-
-                                <label for="spservice" class="col-3 col-form-label">Select your Service</label>
-                                <select class="form-control custom-select col-5" id="spservice" required size="1">
-                                    <option selected>Choose...</option>
-                                    <option value="1">Maid</option>
-                                    <option value="2">Babysitter</option>
-                                    <option value="3">Cook</option>
-                                </select>
+                                <div class="col-4"></div>
+                                <label for="cpincode" class="col-2 col-form-label">Pincode</label>
+                                <input type="text" class="form-control col-2" id="cpincode">
                             </div>
                             <div class="form-group  row  ">
-
-                                <label for="spexp" class="col-3 col-form-label">Experience</label>
-                                <input type="number" class="form-control col-5" id="spexp">
-                            </div>
-                            <div class="form-group  row  ">
-
-                                <label for="spcharge" class="col-3 col-form-label">Service Charge</label>
-                                <input type="number" class="form-control col-5" id="spcharge">
-                            </div>
-                            <div class="form-group  row  ">
-
-                                <label for="sppassword" class="col-3 col-form-label">Password</label>
-                                <input type="password" class="form-control col-5" id="sppassword">
-                            </div>
-                            <div class="form-group  row  ">
-
-                                <label for="sppassword" class="col-3 col-form-label">Confirm Password</label>
-                                <input type="password" class="form-control col-5" id="sppassword">
-                            </div>
-                            <div class="form-group  row  ">
-
-                                <label for="spid" class="col-3 col-form-label">ID Proof</label>
-                                <select class="form-control custom-select col-2" id="spid" required>
+                                <div class="col-4"></div>
+                                <label for="cid" class="col-2 col-form-label">ID Proof</label>
+                                <select class="form-control custom-select col-3" id="cid" required>
                                     <option selected>Choose...</option>
                                     <option value="1">Aadhar</option>
                                     <option value="2">Pan card</option>
                                 </select>
-                                
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-6"></div>
                                 <input type="file" class="form-control col-3" id="spidupload">
                             </div>
-                            <button type="button" class="btn btn-lg" style="color:antiquewhite;background-color:rgb(63, 12, 12) ;"
-                                data-mdb-ripple-color="dark">Register</button>
+                            <div class="form-group  row  ">
+                                <div class="col-4"></div>
+                                <label for="cpassword" class="col-2 col-form-label">Password</label>
+                                <input type="cpassword" class="form-control col-3" id="sppassword">
+                            </div>
+                            <div class="form-group  row  ">
+                                <div class="col-4"></div>
+                                <label for="cspassword" class="col-2 col-form-label">Confirm Password</label>
+                                <input type="cspassword" class="form-control col-3" id="sppassword">
+                            </div>
+                            <div class="row">
+                                <div class="col-5"></div>
+                            <button type="button" class="btn btn-lg col-2" style="color:antiquewhite;background-color:rgb(63, 12, 12) ;"
+                            data-mdb-ripple-color="dark">Register</button>
+                            </div>
+                           
                         </form>
+                        
                     </div>
                 </div>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar " role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </div>
-    @endsection
+          </div>
+    </div> 
+    
+</div>
+<div class="progress">
+    <div class="progress-bar " role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+@endsection

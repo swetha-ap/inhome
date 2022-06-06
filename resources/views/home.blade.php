@@ -17,6 +17,15 @@
           padding: 20px;
           /* Some padding */
      }
+     input[type="text"]
+{
+    background: transparent;
+    border: 1px solid whitesmoke;
+    
+}
+::-ms-input-placeholder {
+ color: blue;
+}
 </style>
 <div class="container-fluid" style="height: 1000px;">
      <div class="row"></div>
@@ -40,6 +49,14 @@
                <!-- <img src="{{ asset('images/banner.png') }}" style="height: 100%; width: 100%"> -->
                <div class="content">
                     <h1 align="center">Quality Services , A Click Away</h1>
+                    <form>
+                         <div class="form-group row">
+                            <div class="col-4"></div>
+                            <input type="text" class="form-control col-3" placeholder="Enter your Area">
+                            <button type="button" class="btn  btn-primary col-1"
+                            data-mdb-ripple-color="dark">Search</button>
+                         </div>
+                    </form>
                </div>
           </div>
      </div>

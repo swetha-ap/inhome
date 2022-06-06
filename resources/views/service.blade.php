@@ -32,12 +32,15 @@
      .container:hover .overlay {
           opacity: 1;
      }
+     .bgimg1{
+         background-image: linear-gradient(to bottom right,rgb(50, 176, 190),rgb(188, 237, 241),white);
+     }
 </style>
-<div class="container-fluid" style="height:900px;  background-color: rgb(117, 169, 179);">
+<div class="container-fluid bgimg1" style="height:900px; ">
  <div class="row ">
       <div class="col-12" style="height: 100px;"></div>
               <div class="col-12" style="height: 100px;">
-                   <h1 align="center" style="color: rgb(7, 95, 61);" >We Provide You with the Best Of Best</h1>
+                   <h1 align="center" style="font-family: cursive; color: rgb(209, 46, 5);" >We Provide You with the Best Of Best</h1>
               </div>
          </div>
          <div class="row">
@@ -45,7 +48,7 @@
               <div class="col-3" style="display:inline-block; height:300px;">
                     <div class="card" style="width: 18rem;height: 530px;">
                          <img src="images/c1.gif" class="card-img-top" style="height: 300px;"alt="...">
-                         <div class="card-body" >
+                         <div class="card-body " >
                            <h3 class="card-title" style="color: darkblue;">Cleaning</h3>
                            <h5 class="card-text" style="color: darkblue;">Everyone dreams of a clean home.<br />We Clean so you dont have to!!!</h5>
                            <a href="#" class="btn btn-primary">Book Now</a>
