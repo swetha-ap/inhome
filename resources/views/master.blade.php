@@ -13,18 +13,7 @@
          body {
             font-family: Helvetica, sans-serif;
         }
-        .header{
-            height: 100px;
-            
-            padding: 0 8%;
-            position: relative;
-        }
-        .footer{
-            height: 50px;
-            
-            padding: 5% 8%;
-            position: relative;
-        }
+        
         nav{
             display: flex;
             align-items: center;
@@ -45,22 +34,15 @@
   padding-left:180px;
   padding-right:30px;
 }
-    </style>
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ </style>
 </head>
 <body>
-    <!-- <div class="header">
-           <nav>
-              <img src="images/1.jpg" height="80px">
-               <ul class="nav-links">
-                   <li><a href="{{ route ('home') }}">Home</a></li>
-                   <li><a href="{{ route ('about') }}">About</a></li>
-                   <li><a href="#1">Services</a></li>
-                   <li><a href="">Login</a></li>
-                   <li><a href="">Sign Up</a></li>
-               </ul>
-           </nav>
-    </div> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
   <a class="navbar-brand" href="#">
       <img src="images/1.jpg"  height="80">
   </a>
@@ -68,7 +50,7 @@
     <span class="navbar-toggler-icon"></span>
   </button> -->
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse topnav" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="{{ route ('home') }}">Home <span class="sr-only">(current)</span></a>
@@ -112,8 +94,9 @@
   </div>
 </nav>
                            <!-- BREADCRUMBS -->
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+  <!-- <div class="container-fluid">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route ('home') }}">Home</a></li>
@@ -122,17 +105,11 @@
       </ol>
     </nav>
   </div>
-</nav> -->
+</nav>  -->
    <div>
     @yield('content')
     </div>
-    <!-- <div class="footer">
-        <nav>
-            <img src="images/1.jpg" height="80px">
-            <p>Contact us : 9480974064</p>
-            <p>Trusted Services Across India</p>
-        </nav>
-    </div> -->
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">
       <img src="images/1.jpg"  height="80">
