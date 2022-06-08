@@ -24,3 +24,4 @@ route::view('s' , 'service')->name('service');
 route::view('ss' , 'signupservice')->name('signupservice');
 route::view('cs' , 'signupcustomer')->name('signupcustomer');
 route::view('ch' , 'customerhome');
+route::view('cb' , 'customerbooking');
