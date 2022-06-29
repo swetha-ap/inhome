@@ -5,17 +5,31 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       crossorigin="anonymous"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{ asset ('js/jsfunctions.js') }}"></script>
 <style>
+    #l1,#l2,#l3,#l4,#l5,#l6,#l7,#l8,#l9,#l10,#l11,#l12{
+        color: red;
+    }
+
     label,h6{
         font-family: cursive;
-        color:firebrick
+        color:rgb(60, 9, 60)
     }
 
 input:focus {
   border: 2px solid #f2796e;
 }
-
+.valid-feedback.feedback-icon,
+.invalid-feedback.feedback-icon {
+    position: absolute;
+    width: auto;
+    bottom: 10px;
+    right: 10px;
+    margin-top: 0;
+}
 </style>
 <div class="container-fluid" style=" background-image: url('images/ss.png'); height: 1000px;">
     <div class="row">
@@ -37,14 +51,20 @@ input:focus {
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="cfname" class="col-2 col-form-label">First Name</label>
-                                <input type="text" class="form-control col-3" id="cfname" name="cufname" placeholder="First name">
-                                <label id="1"></label>
+                                <input type="text" class="form-control is-valid col-3" id="cfname" name="cufname" placeholder="First name">
+                                <label id="l1"></label>
+                                <div class="valid-feedback feedback-icon">
+                                    <i class="fa fa-check"></i>
+                               </div>
+                               <div class="invalid-feedback feedback-icon">
+                                    <i class="fa fa-times"></i>
+                               </div>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="clname" class="col-2 col-form-label">Last Name</label>
                                 <input type="text" class="form-control col-3" id="clname" name="culname" placeholder="Last name">
-                                <label id="2"></label>
+                                <label id="l2"></label>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
@@ -69,7 +89,7 @@ input:focus {
                                             value="option3" />
                                         <label class="form-check-label" for="otherGender">Other</label>
                                     </div>
-                                    <label id="3"></label>
+                                    <label id="l3"></label>
                                 </div>
                             </div>
                             <div class="form-group  row  ">
@@ -77,24 +97,24 @@ input:focus {
                                 <label for="cemail" class="col-2 col-form-label">Email ID</label>
                                 <input type="email" class="form-control col-3" id="cemail"
                                     name="cuemail" placeholder="Enter Email Address">
-                                    <label id="4"></label> 
+                                    <label id="l4"></label> 
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="cmobile" class="col-2 col-form-label">Mobile No.</label>
                                 <input type="text" class="form-control col-3" id="cmobile" name="cumobile">
-                                <label id="5"></label>
+                                <label id="l5"></label>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="caddress" class="col-2 col-form-label">Address</label>
                                 <input type="textarea" class="form-control col-3" id="caddress" name="cuaddress">
-                                <label id="6"></label>
+                                <label id="l6"></label>
                             </div>
                             <div class="form-group row">
                                 <div class="col-4"></div>
                                 <div class="col-3">
-                                    <select class="form-control custom-select " id="cstate" name="custate" required="">
+                                    <select class="form-control custom-select " id="cstate" name="custate" >
                                         <option value="">State</option>
                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                                         <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -133,30 +153,30 @@ input:focus {
                                         <option value="Uttarakhand">Uttarakhand</option>
                                         <option value="West Bengal">West Bengal</option>
                                     </select>
-                                    <label id="7"></label>
+                                    <label id="l7"></label>
                                 </div>
                                 <div class="col-2">
                                     <select class="form-control custom-select " id="ccity" name="cucity" required>
                                         <option value="City">City</option>
                                     </select>
-                                    <label id="8"></label>
+                                    <label id="l8"></label>
                                 </div>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="cpincode" class="col-2 col-form-label">Pincode</label>
                                 <input type="text" class="form-control col-2" id="cpincode" name="cupincode">
-                                <label id="9"></label>
+                                <label id="l9"></label>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="cid" class="col-2 col-form-label">ID Proof</label>
-                                <select class="form-control custom-select col-3" id="cid" name="cuid" required="">
+                                <select class="form-control custom-select col-3" id="cid" name="cuid" >
                                     <option value="" >Choose...</option>
                                     <option value="1">Aadhar</option>
                                     <option value="2">Pan card</option>
                                 </select>
-                                <label id="10"></label>
+                                <label id="l10"></label>
                             </div>
                             <div class="row form-group">
                                 <div class="col-6"></div>
@@ -166,13 +186,13 @@ input:focus {
                                 <div class="col-4"></div>
                                 <label for="cpassword" class="col-2 col-form-label">Password</label>
                                 <input type="password" class="form-control col-3" id="cspassword" name="cupassword">
-                                <label id="11"></label>
+                                <label id="l11"></label>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="cspassword1" class="col-2 col-form-label">Confirm Password</label>
                                 <input type="password" class="form-control col-3" id="cspassword1" name="cupassword1">
-                                <label id="12"></label>
+                                <label id="l12"></label>
                             </div>
                             <div class="row">
                                 <div class="col-5"></div>
