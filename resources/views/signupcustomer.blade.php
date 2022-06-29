@@ -1,10 +1,21 @@
 @extends('master')
 @section('content')
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <script type="text/javascript" src="{{ asset ('js/jsfunctions.js') }}"></script>
 <style>
     label,h6{
         font-family: cursive;
         color:firebrick
     }
+
+input:focus {
+  border: 2px solid #f2796e;
+}
+
 </style>
 <div class="container-fluid" style=" background-image: url('images/ss.png'); height: 1000px;">
     <div class="row">
@@ -22,16 +33,18 @@
                     </div>
                 <div class="row">
                     <div class="col">
-                        <form>
+                        <form name="form" id="form1" onsubmit="return validate()" >
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="cfname" class="col-2 col-form-label">First Name</label>
-                                <input type="text" class="form-control col-3" id="cfname" placeholder="First name">
+                                <input type="text" class="form-control col-3" id="cfname" name="cufname" placeholder="First name">
+                                <label id="1"></label>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="clname" class="col-2 col-form-label">Last Name</label>
-                                <input type="text" class="form-control col-3" id="clname" placeholder="Last name">
+                                <input type="text" class="form-control col-3" id="clname" name="culname" placeholder="Last name">
+                                <label id="2"></label>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
@@ -56,29 +69,33 @@
                                             value="option3" />
                                         <label class="form-check-label" for="otherGender">Other</label>
                                     </div>
+                                    <label id="3"></label>
                                 </div>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="cemail" class="col-2 col-form-label">Email ID</label>
                                 <input type="email" class="form-control col-3" id="cemail"
-                                    placeholder="Enter Email Address">
+                                    name="cuemail" placeholder="Enter Email Address">
+                                    <label id="4"></label> 
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="cmobile" class="col-2 col-form-label">Mobile No.</label>
-                                <input type="text" class="form-control col-3" id="cmobile">
+                                <input type="text" class="form-control col-3" id="cmobile" name="cumobile">
+                                <label id="5"></label>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="caddress" class="col-2 col-form-label">Address</label>
-                                <input type="textarea" class="form-control col-3" id="caddress">
+                                <input type="textarea" class="form-control col-3" id="caddress" name="cuaddress">
+                                <label id="6"></label>
                             </div>
                             <div class="form-group row">
                                 <div class="col-4"></div>
                                 <div class="col-3">
-                                    <select class="form-control custom-select " id="cstate" required>
-                                        <option value="State">State</option>
+                                    <select class="form-control custom-select " id="cstate" name="custate" required="">
+                                        <option value="">State</option>
                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                                         <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                                         <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -116,26 +133,30 @@
                                         <option value="Uttarakhand">Uttarakhand</option>
                                         <option value="West Bengal">West Bengal</option>
                                     </select>
+                                    <label id="7"></label>
                                 </div>
                                 <div class="col-2">
-                                    <select class="form-control custom-select " id="ccity" required>
+                                    <select class="form-control custom-select " id="ccity" name="cucity" required>
                                         <option value="City">City</option>
                                     </select>
+                                    <label id="8"></label>
                                 </div>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="cpincode" class="col-2 col-form-label">Pincode</label>
-                                <input type="text" class="form-control col-2" id="cpincode">
+                                <input type="text" class="form-control col-2" id="cpincode" name="cupincode">
+                                <label id="9"></label>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="cid" class="col-2 col-form-label">ID Proof</label>
-                                <select class="form-control custom-select col-3" id="cid" required>
-                                    <option selected>Choose...</option>
+                                <select class="form-control custom-select col-3" id="cid" name="cuid" required="">
+                                    <option value="" >Choose...</option>
                                     <option value="1">Aadhar</option>
                                     <option value="2">Pan card</option>
                                 </select>
+                                <label id="10"></label>
                             </div>
                             <div class="row form-group">
                                 <div class="col-6"></div>
@@ -144,16 +165,18 @@
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
                                 <label for="cpassword" class="col-2 col-form-label">Password</label>
-                                <input type="cpassword" class="form-control col-3" id="sppassword">
+                                <input type="password" class="form-control col-3" id="cspassword" name="cupassword">
+                                <label id="11"></label>
                             </div>
                             <div class="form-group  row  ">
                                 <div class="col-4"></div>
-                                <label for="cspassword" class="col-2 col-form-label">Confirm Password</label>
-                                <input type="cspassword" class="form-control col-3" id="sppassword">
+                                <label for="cspassword1" class="col-2 col-form-label">Confirm Password</label>
+                                <input type="password" class="form-control col-3" id="cspassword1" name="cupassword1">
+                                <label id="12"></label>
                             </div>
                             <div class="row">
                                 <div class="col-5"></div>
-                            <button type="button" class="btn btn-lg col-2" style="color:antiquewhite;background-color:rgb(63, 12, 12) ;"
+                            <button type="submit" class="btn btn-lg col-2" style="color:antiquewhite;background-color:rgb(63, 12, 12) ;"
                             data-mdb-ripple-color="dark">Register</button>
                             </div>
                            
