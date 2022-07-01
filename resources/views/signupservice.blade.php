@@ -7,7 +7,7 @@
 <style>
     label,h6{
         font-family: cursive;
-        color:firebrick
+        color:rgb(36, 3, 36)
     }
     input:focus {
   border: 2px solid #f2796e;
@@ -147,10 +147,10 @@
                             </div>
 
 
-                        </form>
+                        
                     </div>
                     <div class="col-6">
-                        <form>
+                        
 
                             <div class="form-group  row  ">
 

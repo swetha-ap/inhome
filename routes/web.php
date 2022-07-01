@@ -27,3 +27,4 @@ route::view('ch' , 'customerhome');
 route::view('cb' , 'customerbooking');
 route::view('sh' , 'serviceproviderhome');
 route::view('sb' , 'servicebookings');
+route::view('admin' , 'admin');
