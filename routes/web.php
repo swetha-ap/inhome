@@ -28,3 +28,5 @@ route::view('cb' , 'customerbooking');
 route::view('sh' , 'serviceproviderhome');
 route::view('sb' , 'servicebookings');
 route::view('admin' , 'admin');
+route::view('ap' , 'adminprofile');
+route::view('ae' , 'admineditprofile');

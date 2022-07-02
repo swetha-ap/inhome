@@ -168,7 +168,12 @@
             </div>
             <!--menu item-->
             <ul>
-               
+                <!-- <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li> -->
                 <li>
                     <a href="#" class="active">
                         <span class="icon"><i class="fas fa-desktop"></i></span>
@@ -237,76 +242,6 @@
 
         </div>
     </div>
-        
-    <div class="container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item active" aria-current="page">My Dashboard</li>
-            </ol>
-          </nav>
-        <br><br><br><br><br><br>
-        <div class="row ">
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <div class="card border-info mx-sm-1 p-3">
-                    <div class="card border-info shadow text-info p-3 my-card"><span class="fas fa-users-cog"
-                            aria-hidden="true"></span></div>
-                    <div class="text-info text-center mt-3">
-                        <h4>Service Provider Requests</h4>
-                    </div>
-                    <div class="card-action text-info text-center mt-2">
-                        <h1>2</h1>
-                        <a href="#" style="color: blue;">Click here</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <div class="card border-success mx-sm-1 p-3">
-                    <div class="card border-success shadow text-success p-3 my-card"><span class="fas fa-users"
-                            aria-hidden="true"></span></div>
-                    <div class="text-success text-center mt-3">
-                        <h4>Client Requests</h4>
-                    </div>
-                    <div class="card-action text-success text-center mt-2">
-                        <h1>3</h1>
-                        <a href="#" style="color: green;">Click here</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-       <br><br><br>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <div class="card border-danger mx-sm-1 p-3" >
-                    <div class="card border-danger shadow text-danger p-3 my-card"><span class="fas fa-th-list"
-                            aria-hidden="true"></span></div>
-                    <div class="text-danger text-center mt-3">
-                        <h4>Total Bookings</h4>
-                    </div>
-                    <div class="card-action text-danger text-center mt-2">
-                        <h1>5</h1>
-                        <a href="#" style="color: red;">Click here</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <div class="card border-warning mx-sm-1 p-3">
-                    <div class="card border-warning shadow text-warning p-3 my-card"><span class="fas fa-envelope"
-                            aria-hidden="true"></span></div>
-                    <div class="text-warning text-center mt-3">
-                        <h4>Mails</h4>
-                    </div>
-                    <div class="card-action text-warning text-center mt-2">
-                        <h1>5</h1>
-                        <a href="#" style="color: yellow;">Click here</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <script>
         //    to hide side nav bar
         var hamburger = document.querySelector(".hamburger");
@@ -317,3 +252,4 @@
 </body>
 
 </html>
+    @yield('content')
