@@ -7,7 +7,7 @@
            font-family: serif;
        }
        .bgimg{
-        background-image:url('{{ asset ('images/as.jfif') }}');
+        background-image:url('{{ asset ("images/as.jfif") }}');
        }
        h4{
            color:black;

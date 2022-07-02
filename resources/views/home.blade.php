@@ -46,7 +46,7 @@
                          </div>
                     </div>
                </div>
-               <!-- <img src="{{ asset('images/banner.png') }}" style="height: 100%; width: 100%"> -->
+               
                <div class="content">
                     <h1 align="center">Quality Services , A Click Away</h1>
                     <form>

@@ -16,17 +16,23 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+// web home
 route::view('/' , 'master');
 route::view('h' , 'home')->name('home');
 route::view('a' , 'about')->name('about');
 route::view('c' , 'logincustomer')->name('login');
 route::view('s' , 'service')->name('service');
-route::view('ss' , 'signupservice')->name('signupservice');
-route::view('cs' , 'signupcustomer')->name('signupcustomer');
+// customer
+route::view('c' , 'logincustomer');
+
+route::view('cus' , 'signupcustomer');
 route::view('ch' , 'customerhome');
 route::view('cb' , 'customerbooking');
+// service provider
+route::view('ss' , 'signupservice');
 route::view('sh' , 'serviceproviderhome');
 route::view('sb' , 'servicebookings');
+// admin
 route::view('admin' , 'admin');
 route::view('ap' , 'adminprofile');
 route::view('ae' , 'admineditprofile');

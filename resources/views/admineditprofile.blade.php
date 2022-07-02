@@ -5,11 +5,7 @@
     cursor: pointer;
     
   }
-  span {
-    display: inline-flex;
-    padding: .2em;
-    height: 2em;
-  }
+  
 </style>
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">

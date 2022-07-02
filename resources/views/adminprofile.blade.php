@@ -1,183 +1,103 @@
 @extends('adminmaster')
 @section('content')
 <style>
-    /* .container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-} */
+.main-body {
+    padding: 15px;
+}
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
 .card-body {
-  padding: 1.5rem;
-  flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
 }
-.justify-content-center {
-  justify-content: center !important;
-}
-
-.justify-content-between {
-  justify-content: space-between !important;
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
 }
 
-.align-items-center {
-  align-items: center !important;
-}
-img {
-    page-break-inside: avoid;
-  }
-  .card-profile-image {
-  position: relative;
-}
-
-.card-profile-image img {
-  position: absolute;
-  left: 50%;
-  max-width: 180px;
-  transition: all .15s ease;
-  transform: translate(-50%, -30%);
-  border-radius: .375rem;
-}
-
-.card-profile-image img:hover {
-  transform: translate(-50%, -33%);
-}
 </style>
-<div class="container ">
-    <div class="row">
-        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
-            <div class="card card-profile shadow">
-                <!-- <div class="row justify-content-center">
-              <div class="col-lg-3 order-lg-2"> -->
-                <div class="card-profile-image">
-                    <a href="#">
-                        <img src="{{ asset('images/admin.webp') }}" class="rounded-circle img-fluid">
-                    </a>
-                </div>
-                <!-- </div>
-            </div>  -->
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-xl-8 order-xl-1">
-            <div class="card bg-secondary shadow">
-                <div class="card-header bg-white border-0">
-                    <div class="row align-items-center">
-                        <div class="col-8">
-                            <h3 class="mb-0">My account</h3>
+<div class="container">
+    <div class="main-body">
+        <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="{{ asset('images/admin.webp') }}" alt="Admin" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h4>Swetha A P</h4>
+                                <p class="text-secondary mb-1">Admin</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card-body">
-                    <form>
-                        <h6 class="heading-small text-muted mb-4">User information</h6>
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group focused">
-                                        <label class="form-control-label" for="input-username">Username</label>
-                                        <input type="text" id="input-username"
-                                            class="form-control form-control-alternative" placeholder="Username"
-                                            value="lucky.jesse">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-email">Email address</label>
-                                        <input type="email" id="input-email"
-                                            class="form-control form-control-alternative"
-                                            placeholder="jesse@example.com">
-                                    </div>
-                                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Full Name</h6>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group focused">
-                                        <label class="form-control-label" for="input-first-name">First name</label>
-                                        <input type="text" id="input-first-name"
-                                            class="form-control form-control-alternative" placeholder="First name"
-                                            value="Lucky">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group focused">
-                                        <label class="form-control-label" for="input-last-name">Last name</label>
-                                        <input type="text" id="input-last-name"
-                                            class="form-control form-control-alternative" placeholder="Last name"
-                                            value="Jesse">
-                                    </div>
-                                </div>
+                            <div class="col-sm-9 text-secondary">
+                                Swetha A P
                             </div>
                         </div>
-                        
-                        <!-- Address -->
-                        <h6 class="heading-small text-muted mb-4">Contact information</h6>
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group focused">
-                                        <label class="form-control-label" for="input-address">Address</label>
-                                        <input id="input-address" class="form-control form-control-alternative"
-                                            placeholder="Home Address"
-                                            value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
-                                    </div>
-                                </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="form-group focused">
-                                        <label class="form-control-label" for="input-city">City</label>
-                                        <input type="text" id="input-city" class="form-control form-control-alternative"
-                                            placeholder="City" value="New York">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group focused">
-                                        <label class="form-control-label" for="input-country">Country</label>
-                                        <input type="text" id="input-country"
-                                            class="form-control form-control-alternative" placeholder="Country"
-                                            value="United States">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-country">Postal code</label>
-                                        <input type="number" id="input-postal-code"
-                                            class="form-control form-control-alternative" placeholder="Postal code">
-                                    </div>
-                                </div>
+                            <div class="col-sm-9 text-secondary">
+                                ********
                             </div>
                         </div>
-                    </form>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Mobile</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                1234567891
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Address</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                *******
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">State</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                *******
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @endsection

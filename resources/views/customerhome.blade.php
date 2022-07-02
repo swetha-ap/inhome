@@ -1,99 +1,117 @@
-@extends('master')
+@extends('customermaster')
 @section('content')
- <style>
-  .sidenav {
-  height: 100%;
-  width: 160px;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  /* background-color: #111; */
-  overflow-x: hidden;
-  padding-top: 20px;
-  opacity: 0.8;
-}
+<style>
+  .card-counter{
+    box-shadow: 2px 2px 10px #DADADA;
+    margin: 5px;
+    padding: 20px 10px;
+    background-color: #fff;
+    height: 150px;
+    border-radius: 5px;
+    transition: .3s linear all;
+  }
 
-.sidenav a {
-  padding: 32px 16px 16px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #5b5454;
-  display: block;
-}
+  .card-counter:hover{
+    box-shadow: 4px 4px 20px #DADADA;
+    transition: .3s linear all;
+  }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-.chbg{
-    background-image: url('{{ asset("images/chbg.webp") }}');
-    /* width:100%;
-    height: 100%;
-    background-repeat: no-repeat; */
-}
-.img , h1{
-  padding-top: 50px;
-}
+  .card-counter.primary{
+    background-color: #007bff;
+    color: #FFF;
+  }
+
+  .card-counter.danger{
+    background-color: #ef5350;
+    color: #FFF;
+  }  
+
+  .card-counter.success{
+    background-color: #66bb6a;
+    color: #FFF;
+  }  
+  .card-counter.info{
+    background-color: #26c6da;
+    color: #FFF;
+  }  
+
+  .card-counter i{
+    font-size: 5em;
+    opacity: 0.2;
+  }
+
+  .card-counter .count-numbers{
+    position: absolute;
+    right: 35px;
+    top: 20px;
+    font-size: 32px;
+    display: block;
+  }
+
+  .card-counter .count-name{
+    position: absolute;
+    right: 35px;
+    top: 65px;
+    font-style: italic;
+    text-transform: capitalize;
+    opacity: 0.5;
+    display: block;
+    font-size: 18px;
+  }
+  .card-counter a{
+    position: absolute;
+    right: 35px;
+    top: 100px;
+    font-style: italic;
+    text-transform: capitalize;
+    opacity: 1;
+    display: block;
+    font-size: 18px;
+  }
 </style>
- <div class="container-fluid chbg" style="height: 800px;">
-    <div class="row" >
-        <div class="col" ></div>
-    </div>
-      <div class="row " style="height: 600px;">
-          <div class="col-1" >
-            <div class="sidenav">
-                <a href="">Home</a>
-                <a href="">My Profile</a>
-                <a href="">Book Now</a>
-                <a href="">Log Out</a>
-                <a href="">Help?</a>
-            </div>
-          </div>
-            <div class="col-2"></div>
-            <div class="col-3">
-              <h1>WELCOME USER</h1>
-              <h3 style="padding-top: 100px;" align="center">Your Bookings : <input type="text" style="width:50px; "></h3>
-               <br /><br /><br /><br />
-               <table class="table table-dark" style="width:900px;">
-                 <thead>
-                   <tr>
-                     <td align="center">SL NO</td>
-                     <td colspan="5" align="center">Bookings</td>
-                     <td colspan="2" align="center">Status</td>
-                   </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td align="center">1</td>
-                      <td colspan="5" align="center">Lorem.</td>
-                      <td  colspan="2" align="center">DONE</td>
-                    </tr>
-                    <tr>
-                      <td align="center">2</td>
-                      <td colspan="5" align="center">Lorem.</td>
-                      <td  colspan="2" align="center">PENDING</td>
-                    </tr>
-                    <tr>
-                      <td align="center">3</td>
-                      <td colspan="5" align="center">Lorem.</td>
-                      <td  colspan="2" align="center">CANCELLED</td>
-                    </tr>
-                  </tbody>
-               </table>
-            
-            
-            </div>
-            <div class="col-4"></div>
-            <div class="col-2">
-              <img src="{{ asset('images/user1.png') }}" class="img img-fluid" >
-            </div>
-            <!-- </div> -->
-            <!-- <div class="row"> -->
-            <!-- <div class="col-5"></div>
-            <div class="col-2">
-              <h3>Your Bookings : <input type="text"></h3>
-            </div> -->
+<div class="container">
+  <br><br><br><br><br><br>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <div class="card-counter primary">
+        <i class="fas fa-list-alt"></i>
+        <span class="count-numbers">1</span>
+        <span class="count-name">Pending Bookings</span>
+        <a href="#" style="color: blue;">Click here</a>
       </div>
- </div>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <div class="card-counter success">
+        <i class="fas fa-list-alt"></i>
+        <span class="count-numbers">5</span>
+        <span class="count-name">Confirmed Bookings</span>
+        <a href="#" style="color: green;">Click here</a>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <div class="card-counter danger">
+        <i class="fa fa-database"></i>
+        <span class="count-numbers">0</span>
+        <span class="count-name">Declined Bookings</span>
+        <a href="#" style="color: red;">Click here</a>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <div class="card-counter info">
+        <i class="fas fa-envelope"></i>
+        <span class="count-numbers">3</span>
+        <span class="count-name">Mails</span>
+        <a href="#" style="color: lightblue;">Click here</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 @endsection
