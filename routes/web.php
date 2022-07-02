@@ -20,18 +20,20 @@ use Illuminate\Support\Facades\Route;
 route::view('/' , 'master');
 route::view('h' , 'home')->name('home');
 route::view('a' , 'about')->name('about');
-route::view('c' , 'logincustomer')->name('login');
+route::view('l' , 'login')->name('login');
 route::view('s' , 'service')->name('service');
+// route::view('t' , 'trial');
 // customer
-route::view('c' , 'logincustomer');
-
-route::view('cus' , 'signupcustomer');
+// route::view('c' , 'logincustomer');
+route::view('cus' , 'signupcustomer')->name('signupcustomer');
 route::view('ch' , 'customerhome');
 route::view('cb' , 'customerbooking');
 // service provider
-route::view('ss' , 'signupservice');
+route::view('ss' , 'signupservice')->name('signupservice');
 route::view('sh' , 'serviceproviderhome');
 route::view('sb' , 'servicebookings');
+route::view('sm' , 'serviceprovidermaster');
+
 // admin
 route::view('admin' , 'admin');
 route::view('ap' , 'adminprofile');

@@ -1,4 +1,4 @@
-@extends('master')
+@extends('serviceprovidermaster')
 @section('content')
  <style>
   .sidenav {

@@ -229,8 +229,8 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-5"></div>
-                                        <button type="submit" class="btn btn-lg col-2"
-                                            style="color:antiquewhite;background-color:rgb(63, 12, 12) ;"
+                                        <button type="submit" class="btn btn-lg btn-primary col-2"
+                                           
                                             data-mdb-ripple-color="dark">Register</button>
                                     </div>
 
