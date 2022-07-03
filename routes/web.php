@@ -27,13 +27,16 @@ route::view('s' , 'service')->name('service');
 // route::view('c' , 'logincustomer');
 route::view('cus' , 'signupcustomer')->name('signupcustomer');
 route::view('ch' , 'customerhome');
+route::view('cp' , 'customerprofile');
+route::view('ce' , 'customereditprofile');
 route::view('cb' , 'customerbooking');
 // service provider
 route::view('ss' , 'signupservice')->name('signupservice');
 route::view('sh' , 'serviceproviderhome');
 route::view('sb' , 'servicebookings');
 route::view('sm' , 'serviceprovidermaster');
-
+route::view('sp' , 'serviceproviderprofile');
+route::view('se' , 'serviceprovidereditprofile');
 // admin
 route::view('admin' , 'admin');
 route::view('ap' , 'adminprofile');

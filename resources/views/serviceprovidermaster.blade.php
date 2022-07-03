@@ -162,7 +162,7 @@
         <div class="sidebar">
             <!--profile image & text-->
             <div class="profile">
-                <img src="{{ asset('images/user1.png') }}" alt="profile_picture">
+                <img src="{{ asset('images/user3.png') }}" alt="profile_picture">
                 <h3>NAME</h3>
                 <p>Client</p>
             </div>
