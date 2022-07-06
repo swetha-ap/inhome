@@ -41,3 +41,6 @@ route::view('se' , 'serviceprovidereditprofile');
 route::view('admin' , 'admin');
 route::view('ap' , 'adminprofile');
 route::view('ae' , 'admineditprofile');
+route::view('asp' , 'adminsppage');
+route::view('ac' , 'adminclientpage');
+route::view('am' , 'adminmanage');
