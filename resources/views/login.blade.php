@@ -128,7 +128,7 @@
                             <div class="col"></div>
                             <div class="col-4">
                             <p style="color: white;">Dont have an account? <a style="color: white;"
-                                    href="">SignUp</a></p></div>
+                                    href="{{ route ('signupcustomer') }}">SignUp</a></p></div>
                         </div>
                     </div>
             

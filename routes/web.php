@@ -16,28 +16,34 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
 // web home
 route::view('/' , 'master');
 route::view('h' , 'home')->name('home');
 route::view('a' , 'about')->name('about');
 route::view('l' , 'login')->name('login');
 route::view('s' , 'service')->name('service');
-// route::view('t' , 'trial');
+
 // customer
-// route::view('c' , 'logincustomer');
+
 route::view('cus' , 'signupcustomer')->name('signupcustomer');
 route::view('ch' , 'customerhome')->name('customerhome');
 route::view('cp' , 'customerprofile')->name('customerprofile');
 route::view('ce' , 'customereditprofile')->name('customereditprofile');
 route::view('cb' , 'customerbooking')->name('customerbooking');
+route::view('cub', 'customerbooklist')->name('customerbooklist');
+
 // service provider
+
 route::view('ss' , 'signupservice')->name('signupservice');
 route::view('sh' , 'serviceproviderhome')->name('serviceproviderhome');
 route::view('sb' , 'servicebookings')->name('servicebookings');
 route::view('sm' , 'serviceprovidermaster');
 route::view('sp' , 'serviceproviderprofile')->name('serviceproviderprofile');
 route::view('se' , 'serviceprovidereditprofile')->name('serviceprovidereditprofile');
+
 // admin
+
 route::view('admin' , 'admin')->name('admindashboard');
 route::view('ap' , 'adminprofile')->name('adminprofile');
 route::view('ae' , 'admineditprofile')->name('admineditprofile');

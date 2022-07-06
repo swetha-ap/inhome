@@ -224,7 +224,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('login') }}" id="alogout">
                         <span class="icon"><i class="fas fa-sign-out-alt"></i></i></span>
                         <span class="item">Log Out</span>
                     </a>
@@ -247,6 +247,11 @@
         var hamburger = document.querySelector(".hamburger");
         hamburger.addEventListener("click", function () {
             document.querySelector("body").classList.toggle("active");
+        })
+
+        $('#alogout').on('click' , function(){
+            alert("Do you want to logout???")
+            
         })
     </script>
 </body>

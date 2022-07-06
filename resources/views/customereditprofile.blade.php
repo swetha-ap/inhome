@@ -35,9 +35,10 @@
                 <div class="row mt-3">
                     <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text"
                             class="form-control" placeholder="enter phone number" value=""></div>
-                    <div class="col-md-12"><label class="labels">Address </label><input type="textarea"
-                            class="form-control" placeholder="enter address" value=""></div><br />
-                    <!-- <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div> -->
+                    <div class="col-md-12"><label class="labels">Address </label>
+                    <textarea class="form-control rounded-0" id="" rows="3" placeholder="enter address"></textarea>
+
+                    </div><br />
                     <div class="col-md-12"><label class="labels">Pincode</label><input type="text" class="form-control"
                             placeholder="enter pincode" value=""></div><br />
                     <div class="col-md-12"><label class="labels">ID</label>

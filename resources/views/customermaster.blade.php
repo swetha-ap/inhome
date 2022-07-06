@@ -182,7 +182,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('customerbooklist') }}">
                         <span class="icon"><i class="fas fa-list-alt"></i></span>
                         <span class="item">My Bookings</span>
                     </a>
@@ -206,7 +206,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('login') }}" id="cuslogout">
                         <span class="icon"><i class="fas fa-sign-out-alt"></i></i></span>
                         <span class="item">Log Out</span>
                     </a>
@@ -229,6 +229,11 @@
         var hamburger = document.querySelector(".hamburger");
         hamburger.addEventListener("click", function () {
             document.querySelector("body").classList.toggle("active");
+        })
+
+        $('#cuslogout').on('click' , function(){
+            alert("Do you want to logout???")
+            
         })
     </script>
 </body>
