@@ -25,6 +25,7 @@
 
     .center {
         margin: auto;
+        height: auto;
         width: 300px;
         padding: 20px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -34,6 +35,18 @@
         display: none;
     }
 </style>
+<div class="center hideform">
+    <button id="close" style="float: right;">X</button>
+    <form action="" class="form-group">
+        Enter Date:<br>
+        <input type="date" name="bdate" value="" class="form-control">
+        <br>
+        Enter Time:<br>
+        <input type="time" name="btime" value="" class="form-control">
+        <br><br>
+        <input type="submit" value="Submit" style="background-color: rgb(20, 20, 223);">
+    </form>
+</div>
 <div class="container">
     <br><br>
     <div class="row ">
@@ -144,18 +157,7 @@
         </div>
     </div>
 </div>
-<div class="center hideform">
-    <button id="close" style="float: right;">X</button>
-    <form action="" class="form-group">
-        Enter Date:<br>
-        <input type="date" name="bdate" value="" class="form-control">
-        <br>
-        Enter Time:<br>
-        <input type="time" name="btime" value="" class="form-control">
-        <br><br>
-        <input type="submit" value="Submit" style="background-color: rgb(20, 20, 223);">
-    </form>
-</div>
+
 <script>
     $(document).ready(function () {
         $('button').on('click', function () {
