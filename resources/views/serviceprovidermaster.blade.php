@@ -164,12 +164,12 @@
             <div class="profile">
                 <img src="{{ asset('images/user3.png') }}" alt="profile_picture">
                 <h3>NAME</h3>
-                <p>Client</p>
+                <p>Service Provider</p>
             </div>
             <!--menu item-->
             <ul>
                 <li>
-                    <a href="#" class="active">
+                    <a href="{{ route ('serviceproviderhome') }}" class="active">
                         <span class="icon"><i class="fas fa-desktop"></i></span>
                         <span class="item">My Dashboard</span>
                     </a>
@@ -182,13 +182,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('servicebookings') }}">
                         <span class="icon"><i class="fas fa-list-alt"></i></span>
                         <span class="item">My Book List</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('serviceproviderprofile') }}">
                         <span class="icon"><i class="fas fa-user-alt"></i></span>
                         <span class="item">My Profile</span>
                     </a>
@@ -201,7 +201,7 @@
                 </li> -->
 
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('serviceprovidereditprofile') }}">
                         <span class="icon"><i class="fas fa-cog"></i></span>
                         <span class="item">Manage Account</span>
                     </a>

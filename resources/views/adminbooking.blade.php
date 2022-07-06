@@ -1,4 +1,4 @@
-@extends('serviceprovidermaster')
+@extends('adminmaster')
 @section('content')
 <!-- Datatable plugin CSS file -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
@@ -22,13 +22,13 @@
 </style>
 <div class="container">
   <br><br>
-  <h1 align="center">My Bookings</h1>
+  <h1 align="center">Manage Bookings</h1>
     <br><br><br><br><br>
     <div class="row">
         <!-- <div class="container"> -->
         <div class="col-md-1"></div>
         <div class="col-md-11">
-            <table id="booking" class="table table-striped table-bordered table-sm display" cellspacing="0"
+            <table id="adminbooking" class="table table-striped table-bordered table-sm display" cellspacing="0"
                 width="100%">
                 <thead>
                     <tr>
@@ -36,6 +36,12 @@
 
                         </th>
                         <th class="th-sm">Customer Name
+
+                        </th>
+                        <th class="th-sm">Service Provider Name
+
+                        </th>
+                        <th class="th-sm">Service
 
                         </th>
                         <th class="th-sm">Place
@@ -55,6 +61,8 @@
                     <tr>
                         <td>1</td>
                         <td>ABC</td>
+                        <td>XYZ</td>
+                        <td>Maid</td>
                         <td>Bangalore</td>
                         <td>2022/04/25</td>
                         <td>08:00am</td>
@@ -63,7 +71,8 @@
                     <tr>
                         <td>2</td>
                         <td>DEF</td>
-                       
+                        <td>PQR</td>
+                        <td>Cook</td>
                         <td>Chennai</td>
                         <td>2022/07/25</td>
                         <td>13:50pm</td>
@@ -72,7 +81,8 @@
                     <tr>
                         <td>3</td>
                         <td>GHI</td>
-                       
+                        <td>UVW</td>
+                        <td>Babysitter</td>
                         <td>Kochi</td>
                         <td>2022/01/12</td>
                         <td>17:00pm</td>
@@ -85,7 +95,7 @@
 </div>
 <script>
     $(document).ready(function () {
-        $('#booking').DataTable({});
+        $('#adminbooking').DataTable({});
     });
 </script>
 @endsection

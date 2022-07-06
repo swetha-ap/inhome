@@ -1,10 +1,41 @@
 @extends('customermaster')
 @section('content')
-<style>
+<!-- Datatable plugin CSS file -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
 
+<!-- jQuery library file -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js">
+</script>
+
+<!-- Datatable plugin JS library file -->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<style>
+    .table td {
+        text-align: center;
+    }
+
+    .table th {
+        text-align: center;
+        background-color: rgb(9, 9, 58);
+        color: white;
+    }
+
+    .center {
+        margin: auto;
+        width: 300px;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .hideform {
+        display: none;
+    }
 </style>
 <div class="container">
-    <br><br><br><br>
+    <br><br>
     <div class="row ">
 
         <div class="col-md-5"></div>
@@ -13,49 +44,129 @@
         </div>
     </div>
     <br />
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-5">
-            <div class="card-body">
-                <form>
-
-                    <label class="form-group" for="reqservice">Enter Preferred Service</label>
-
-                    <select class="form-control" id="reqservice">
-                        <option value="Select">Select</option>
-                        <option value="Maid">Maid</option>
-                        <option value="Babysitter">Babysitter</option>
-                        <option value="Cook">Cook</option>
-                    </select>
-
-                    <br />
-
-                    <label class="form-group" for="reqstate">Enter State</label>
-
-                    <select class="form-control" id="reqstate">
-                        <option value="Select">Select</option>
-
-                    </select>
-
-                    <br />
-                    <label class="form-group" for="reqcity">Enter City</label>
-
-                    <select class="form-control" id="reqcity">
-                        <option value="Select">Select</option>
-                    </select>
-
-                    <br />
-                    <div class="row">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-lg btn-primary "
-                                data-mdb-ripple-color="dark">Search</button>
-                        </div>
-                    </div>
-                </form>
+    <form>
+        <div class="form-row">
+            <div class="col-md-4">
+                <label class="form-group" for="reqservice">Enter Preferred Service</label>
+                <select class="form-control" id="reqservice">
+                    <option value="Select">Select</option>
+                    <option value="Maid">Maid</option>
+                    <option value="Babysitter">Babysitter</option>
+                    <option value="Cook">Cook</option>
+                </select>
             </div>
+
+            <div class="col-md-4">
+                <label class="form-group" for="reqstate">Enter State</label>
+
+                <select class="form-control" id="reqstate">
+                    <option value="Select">Select</option>
+
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-group" for="reqcity">Enter City</label>
+
+                <select class="form-control" id="reqcity">
+                    <option value="Select">Select</option>
+                </select>
+            </div>
+
+            <div class="col-md-1" style="padding-top: 40px;">
+                <button type="button" class="btn  btn-primary " data-mdb-ripple-color="dark">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+<br><br><br><br>
+<h2 align="center">Services Near You</h2>
+<br>
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-md-1"></div> -->
+        <div class="col-md-12">
+            <table id="cusbooking" class="table table-striped table-bordered table-sm display" cellspacing="0"
+                width="100%">
+                <thead>
+                    <tr>
+                        <th class="th-sm">SNo
+
+                        </th>
+                        <th class="th-sm">Service Provider Name
+
+                        </th>
+                        <th class="th-sm">Experience
+
+                        </th>
+                        <th class="th-sm">Service Charge
+                            <i class="fas fa-rupee-sign"></i>
+
+                        </th>
+
+                        <th class="th-sm">Rating
+
+                        </th>
+
+                        <th class="th-sm">Action
+
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>JKL</td>
+                        <td>1 year</td>
+                        <td>200</td>
+                        <td><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></td>
+                        <td><button  class="btn-primary">BOOK NOW</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>MNO</td>
+                        <td>2 year</td>
+                        <td>400</td>
+                        <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </td>
+                        <td><button  class="btn-primary">BOOK NOW</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>TUV</td>
+                        <td>6 months</td>
+                        <td>150</td>
+                        <td><i class="fas fa-star-half-alt"></i></td>
+                        <td><button  class="btn-primary">BOOK NOW</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
+<div class="center hideform">
+    <button id="close" style="float: right;">X</button>
+    <form action="" class="form-group">
+        Enter Date:<br>
+        <input type="date" name="bdate" value="" class="form-control">
+        <br>
+        Enter Time:<br>
+        <input type="time" name="btime" value="" class="form-control">
+        <br><br>
+        <input type="submit" value="Submit" style="background-color: rgb(20, 20, 223);">
+    </form>
+</div>
+<script>
+    $(document).ready(function () {
+        $('button').on('click', function () {
+            $('.center').show();
+            $(this).hide();
+        })
 
+        $('#close').on('click', function () {
+            $('.center').hide();
+            $('button').show();
+        })
+    });
+</script>
 @endsection

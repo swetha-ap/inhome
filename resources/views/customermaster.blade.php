@@ -169,7 +169,7 @@
             <!--menu item-->
             <ul>
                 <li>
-                    <a href="#" class="active">
+                    <a href="{{ route ('customerhome') }}" class="active">
                         <span class="icon"><i class="fas fa-desktop"></i></span>
                         <span class="item">My Dashboard</span>
                     </a>
@@ -188,19 +188,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('customerbooking') }}">
                         <span class="icon"><i class="fas fa-user-friends"></i></span>
                         <span class="item">Find Service</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('customerprofile') }}">
                         <span class="icon"><i class="fas fa-user-alt"></i></span>
                         <span class="item">My Profile</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('customereditprofile') }}">
                         <span class="icon"><i class="fas fa-cog"></i></span>
                         <span class="item">Manage Account</span>
                     </a>

@@ -170,7 +170,7 @@
             <ul>
                
                 <li>
-                    <a href="#" class="active">
+                    <a href="{{ route ('admindashboard') }}" class="active">
                         <span class="icon"><i class="fas fa-desktop"></i></span>
                         <span class="item">My Dashboard</span>
                     </a>
@@ -183,43 +183,43 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('adminsppage') }}">
                         <span class="icon"><i class="fas fa-user-friends"></i></span>
                         <span class="item">Service Providers</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('adminclientpage') }}">
                         <span class="icon"><i class="fas fa-user-friends"></i></span>
                         <span class="item">Clients</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('adminbooking') }}">
                         <span class="icon"><i class="fas fa-list-alt"></i></span>
                         <span class="item">Bookings</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('adminmanage') }}">
                         <span class="icon"><i class="fas fa-tag"></i></span>
                         <span class="item">Manage Services</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('adminprofile') }}">
                         <span class="icon"><i class="fas fa-user-alt"></i></span>
                         <span class="item">My Profile</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route ('admineditprofile') }}">
                         <span class="icon"><i class="fas fa-cog"></i></span>
                         <span class="item">Manage Account</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="">
                         <span class="icon"><i class="fas fa-sign-out-alt"></i></i></span>
                         <span class="item">Log Out</span>
                     </a>
