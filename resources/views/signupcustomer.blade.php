@@ -1,9 +1,11 @@
 @extends('master')
 @section('content')
-<script type="text/javascript" src="{{ asset ('js/jsfunctions.js') }}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ asset ('js/validations.js') }}"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"> </script>
 <style>
     .container-fluid .content {
         position: absolute;
@@ -21,26 +23,15 @@
         padding: 20px;
         /* Some padding */
     }
-
-    #l1,
-    #l2,
-    #l3,
-    #l4,
-    #l5,
-    #l6,
-    #l7,
-    #l8,
-    #l9,
-    #l10,
-    #l11,
-    #l12 {
-        color: red;
-    }
-
     label,
     h6 {
         font-family: cursive;
         color: rgb(218, 205, 218)
+    }
+    form .error{
+         color: red;
+         font-weight: bold;
+         font-family: Arial, Helvetica, sans-serif;
     }
 </style>
 <div class="container-fluid" style="height: 1500px;">
@@ -79,20 +70,18 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <form name="form" id="form1" onsubmit="return validate()">
+                                <form  id="customersignup">
                                     <div class="form-group  row  ">
                                         <div class="col-4"></div>
                                         <label for="cfname" class="col-2 col-form-label">First Name</label>
                                         <input type="text" class="form-control  col-3" id="cfname" name="cufname"
                                             placeholder="First name">
-                                        <label id="l1"></label>
                                     </div>
                                     <div class="form-group  row  ">
                                         <div class="col-4"></div>
                                         <label for="clname" class="col-2 col-form-label">Last Name</label>
                                         <input type="text" class="form-control col-3" id="clname" name="culname"
                                             placeholder="Last name">
-                                        <label id="l2"></label>
                                     </div>
                                     <div class="form-group  row  ">
                                         <div class="col-4"></div>
@@ -117,7 +106,6 @@
                                                     id="otherGender" value="option3" />
                                                 <label class="form-check-label" for="otherGender">Other</label>
                                             </div>
-                                            <label id="l3"></label>
                                         </div>
                                     </div>
                                     <div class="form-group  row  ">
@@ -125,20 +113,17 @@
                                         <label for="cemail" class="col-2 col-form-label">Email ID</label>
                                         <input type="email" class="form-control col-3" id="cemail" name="cuemail"
                                             placeholder="Enter Email Address">
-                                        <label id="l4"></label>
                                     </div>
                                     <div class="form-group  row  ">
                                         <div class="col-4"></div>
                                         <label for="cmobile" class="col-2 col-form-label">Mobile No.</label>
                                         <input type="text" class="form-control col-3" id="cmobile" name="cumobile">
-                                        <label id="l5"></label>
                                     </div>
                                     <div class="form-group  row  ">
                                         <div class="col-4"></div>
                                         <label for="caddress" class="col-2 col-form-label">Address</label>
-                                        <input type="textarea" class="form-control col-3" id="caddress"
-                                            name="cuaddress">
-                                        <label id="l6"></label>
+                                        <textarea id="caddress" 
+                                        name="cuaddress"  rows="3" cols="41"></textarea>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-4"></div>
@@ -183,21 +168,18 @@
                                                 <option value="Uttarakhand">Uttarakhand</option>
                                                 <option value="West Bengal">West Bengal</option>
                                             </select>
-                                            <label id="l7"></label>
                                         </div>
                                         <div class="col-2">
-                                            <select class="form-control custom-select " id="ccity" name="cucity"
-                                                required>
-                                                <option value="City">City</option>
+                                            <select class="form-control custom-select " id="ccity" name="cucity">
+                                                
+                                                <option value="">City</option>
                                             </select>
-                                            <label id="l8"></label>
                                         </div>
                                     </div>
                                     <div class="form-group  row  ">
                                         <div class="col-4"></div>
                                         <label for="cpincode" class="col-2 col-form-label">Pincode</label>
                                         <input type="text" class="form-control col-2" id="cpincode" name="cupincode">
-                                        <label id="l9"></label>
                                     </div>
                                     <div class="form-group  row  ">
                                         <div class="col-4"></div>
@@ -207,31 +189,28 @@
                                             <option value="1">Aadhar</option>
                                             <option value="2">Pan card</option>
                                         </select>
-                                        <label id="l10"></label>
                                     </div>
                                     <div class="row form-group">
                                         <div class="col-6"></div>
-                                        <input type="file" class="form-control col-3" id="spidupload">
+                                        <input type="file" class="form-control col-3" id="cidupload" name="cupload">
                                     </div>
                                     <div class="form-group  row  ">
                                         <div class="col-4"></div>
                                         <label for="cpassword" class="col-2 col-form-label">Password</label>
                                         <input type="password" class="form-control col-3" id="cspassword"
                                             name="cupassword">
-                                        <label id="l11"></label>
                                     </div>
                                     <div class="form-group  row  ">
                                         <div class="col-4"></div>
                                         <label for="cspassword1" class="col-2 col-form-label">Confirm Password</label>
                                         <input type="password" class="form-control col-3" id="cspassword1"
                                             name="cupassword1">
-                                        <label id="l12"></label>
                                     </div>
                                     <div class="row">
                                         <div class="col-5"></div>
                                         <button type="submit" class="btn btn-lg btn-primary col-2"
                                            
-                                            data-mdb-ripple-color="dark">Register</button>
+                                            data-mdb-ripple-color="dark" id="csubmit">Register</button>
                                     </div>
 
                                 </form>
@@ -243,6 +222,17 @@
             </div>
         </div>
     </div>
-
 </div>
+<script>
+    jQuery.validator.addMethod("lettersonly", function(value, element) {
+    return this.optional(element) || /^[a-z]+$/i.test(value);
+    }); 
+    
+    // Password with spl char
+    $.validator.addMethod('mypassword', function(value, element) {
+        return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/) && value.match(/[@#!_$]/));
+    },
+    'Password must contain at least one numeric,one alphabetic,one special character(@ # ! _ $');
+
+</script>
 @endsection

@@ -1,9 +1,10 @@
 @extends('master')
 @section('content')
-<script type="text/javascript" src="{{ asset ('js/jsfunctions.js') }}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ asset ('js/validations.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"> </script>
 <style>
     .container-fluid .content {
         position: absolute;
@@ -21,26 +22,15 @@
         padding: 20px;
         /* Some padding */
     }
-
-    /* #l1,
-    #l2,
-    #l3,
-    #l4,
-    #l5,
-    #l6,
-    #l7,
-    #l8,
-    #l9,
-    #l10,
-    #l11,
-    #l12 {
-        color: red;
-    } */
-
     label,
     h6 {
         font-family: cursive;
         color: rgb(218, 205, 218)
+    }
+    form .error{
+         color: red;
+         font-weight: bold;
+         font-family: Arial, Helvetica, sans-serif;
     }
 </style>
 <div class="container-fluid" style="height: 1500px;">
@@ -74,23 +64,22 @@
                 </div>
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-12">
-                                <div class="row">
+                        <div class="row">
                                     <div class="col" style="height: 110px;"></div>
-                                </div>
+                        </div>
+                        <form id="spsignup" >
                             <div class="row">
                                 <div class="col-6">
-                                    <form name="form1" id="f1" onsubmit="return validation()">
+                                    
                                         <div class="form-group  row  ">
                                             <div class="col-2"></div>
                                             <label for="spfname" class="col-3 col-form-label">First Name</label>
                                             <input type="text" class="form-control col-5" name="spfn" id="spfname" placeholder="First name">
-                                            <label id="l13"></label>
                                         </div>
                                         <div class="form-group  row  ">
                                             <div class="col-2"></div>
                                             <label for="splname" class="col-3 col-form-label">Last Name</label>
                                             <input type="text" class="form-control col-5" name="spln" id="splname" placeholder="Last name">
-                                            <label id="l14"></label>
                                         </div>
                                         <div class="form-group  row  ">
                                             <div class="col-2"></div>
@@ -116,7 +105,6 @@
                                                         value="option3" />
                                                     <label class="form-check-label" for="otherGender">Other</label>
                                                 </div>
-                                                <label id="l15"></label>
                                             </div>
                                         </div>
                                         <div class="form-group  row  ">
@@ -124,19 +112,16 @@
                                             <label for="spemail" class="col-3 col-form-label">Email ID</label>
                                             <input type="email" class="form-control col-5" id="spemail"
                                                 name="spmail" placeholder="Enter Email Address">
-                                            <label id="l16"></label>
                                         </div>
                                         <div class="form-group  row  ">
                                             <div class="col-2"></div>
                                             <label for="spmobile" class="col-3 col-form-label">Mobile No.</label>
                                             <input type="text" class="form-control col-5" id="spmobile" name="spmob">
-                                            <label id="l17"></label>
                                         </div>
                                         <div class="form-group  row  ">
                                             <div class="col-2"></div>
                                             <label for="spaddress" class="col-3 col-form-label">Address</label>
-                                            <input type="textarea" class="form-control col-5" id="spaddress" name="spaddr">
-                                            <label id="l18"></label>
+                                            <textarea id="spaddress" name="spaddr" cols="34" rows="3"></textarea>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-2"></div>
@@ -180,20 +165,17 @@
                                                     <option value="Uttarakhand">Uttarakhand</option>
                                                     <option value="West Bengal">West Bengal</option>
                                                 </select>
-                                                <label id="l19"></label>
                                             </div>
                                             <div class="col-3">
-                                                <select class="form-control custom-select " id="spcity" name="spcity">
-                                                    <option value="City">City</option>
+                                                <select class="form-control custom-select " id="spcity" name="spcitys">
+                                                    <option value="">City</option>
                                                 </select>
-                                                <label id="l20"></label>
                                             </div>
                                         </div>
                                         <div class="form-group  row  ">
                                             <div class="col-2"></div>
                                             <label for="sppincode" class="col-2 col-form-label">Pincode</label>
                                             <input type="text" class="form-control col-5" id="sppincode" name="sppin">
-                                            <label id="l21"></label>
                                         </div>
             
             
@@ -205,58 +187,67 @@
                                         <div class="form-group  row  ">
             
                                             <label for="spservice" class="col-3 col-form-label">Select your Service</label>
-                                            <select class="form-control custom-select col-5" id="spservice" required size="1" name="spservice">
-                                                <option selected>Choose...</option>
+                                            <select class="form-control custom-select col-5" id="spservice" name="spservices">
+                                                <option value="">Choose...</option>
                                                 <option value="Maid">Maid</option>
                                                 <option value="Babysitter">Babysitter</option>
                                                 <option value="Cook">Cook</option>
                                             </select>
-                                            <label id="l22"></label>
                                         </div>
                                         <div class="form-group  row  ">
             
                                             <label for="spexp" class="col-3 col-form-label">Experience</label>
                                             <input type="number" class="form-control col-5" id="spexp" name="spexpe">
-                                            <label id="l23"></label>
                                         </div>
                                         <div class="form-group  row  ">
             
                                             <label for="spcharge" class="col-3 col-form-label">Service Charge</label>
                                             <input type="number" class="form-control col-5" id="spcharge" name="spchg">
-                                            <label id="l24"></label>
                                         </div>
                                         <div class="form-group  row  ">
             
                                             <label for="sppassword" class="col-3 col-form-label">Password</label>
                                             <input type="password" class="form-control col-5" id="sppassword" name="sppwd">
-                                            <label id="l25"></label>
                                         </div>
                                         <div class="form-group  row  ">
             
                                             <label for="sppassword" class="col-3 col-form-label">Confirm Password</label>
                                             <input type="password" class="form-control col-5" id="sppassword1" name="sppwd1">
-                                            <label id="l26"></label>
                                         </div>
                                         <div class="form-group  row  ">
             
                                             <label for="spid" class="col-3 col-form-label">ID Proof</label>
-                                            <select class="form-control custom-select col-2" id="spid" name="spids">
-                                                <option selected>Choose...</option>
-                                                <option value="1">Aadhar</option>
-                                                <option value="2">Pan card</option>
+                                            <select class="form-control custom-select col-5" id="spid" name="spids">
+                                                <option value="">Choose...</option>
+                                                <option value="Aadhar">Aadhar</option>
+                                                <option value="pancard">Pan card</option>
                                             </select>
-                                            <label id="l27"></label>
-                                            <input type="file" class="form-control col-3" id="spidupload">
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-lg" 
-                                            data-mdb-ripple-color="dark">Register</button>
-                                    </form>
+                                        <div class="row form-group">
+                                            <div class="col-3"></div>
+                                            <input type="file" class="form-control col-5" id="spidupload" name="spupload">
+                                        </div>
+                                        <button type="submit" id="spsubmit" class="btn btn-primary btn-lg" 
+                                            data-mdb-ripple-color="dark" >Register</button>
+                                    
                                 </div>
                             </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+     jQuery.validator.addMethod("lettersonly", function(value, element) {
+    return this.optional(element) || /^[a-z]+$/i.test(value);
+    }); 
+
+     // Password with spl char
+     $.validator.addMethod('mypassword', function(value, element) {
+        return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/) && value.match(/[@#!_$]/));
+    },
+    'Password must contain at least one numeric,one alphabetic,one special character(@ # ! _ $');
+</script>
 @endsection
