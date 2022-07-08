@@ -78,7 +78,7 @@
         <i class="fas fa-list-alt"></i>
         <span class="count-numbers">1</span>
         <span class="count-name">Pending Bookings</span>
-        <a href="#" style="color: blue;">Click here</a>
+        <!-- <a href="#" style="color: blue;">Click here</a> -->
       </div>
     </div>
     <div class="col-md-2"></div>
@@ -87,7 +87,7 @@
         <i class="fas fa-list-alt"></i>
         <span class="count-numbers">5</span>
         <span class="count-name">Confirmed Bookings</span>
-        <a href="#" style="color: green;">Click here</a>
+        <!-- <a href="#" style="color: green;">Click here</a> -->
       </div>
     </div>
   </div>
@@ -99,7 +99,7 @@
         <i class="fa fa-database"></i>
         <span class="count-numbers">0</span>
         <span class="count-name">Declined Bookings</span>
-        <a href="#" style="color: red;">Click here</a>
+        <!-- <a href="#" style="color: red;">Click here</a> -->
       </div>
     </div>
     <div class="col-md-2"></div>
@@ -108,7 +108,7 @@
         <i class="fas fa-envelope"></i>
         <span class="count-numbers">3</span>
         <span class="count-name">Mails</span>
-        <a href="#" style="color: lightblue;">Click here</a>
+        <!-- <a href="#" style="color: lightblue;">Click here</a> -->
       </div>
     </div>
   </div>

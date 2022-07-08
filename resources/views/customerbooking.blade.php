@@ -35,18 +35,6 @@
         display: none;
     }
 </style>
-<div class="center hideform">
-    <button id="close" style="float: right;">X</button>
-    <form action="" class="form-group">
-        Enter Date:<br>
-        <input type="date" name="bdate" value="" class="form-control">
-        <br>
-        Enter Time:<br>
-        <input type="time" name="btime" value="" class="form-control">
-        <br><br>
-        <input type="submit" value="Submit" style="background-color: rgb(20, 20, 223);">
-    </form>
-</div>
 <div class="container">
     <br><br>
     <div class="row ">
