@@ -97,7 +97,6 @@
 <br>
 <div class="container">
     <div class="row">
-        <!-- <div class="col-md-1"></div> -->
         <div class="col-md-12">
             <table id="cusbooking" class="table table-striped table-bordered table-sm display" cellspacing="0"
                 width="100%">
@@ -133,16 +132,15 @@
                         <td>1 year</td>
                         <td>200</td>
                         <td><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></td>
-                        <td><button  class="btn-primary">BOOK NOW</button></td>
+                        <td><button type="button" class="btn-primary" data-toggle="modal" data-target="#bookmodal">BOOK NOW</button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>MNO</td>
                         <td>2 year</td>
                         <td>400</td>
-                        <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                        </td>
-                        <td><button  class="btn-primary">BOOK NOW</button></td>
+                        <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></td>
+                        <td><button type="button" class="btn-primary" data-toggle="modal" data-target="#bookmodal">BOOK NOW</button></td>
                     </tr>
                     <tr>
                         <td>3</td>
@@ -150,25 +148,39 @@
                         <td>6 months</td>
                         <td>150</td>
                         <td><i class="fas fa-star-half-alt"></i></td>
-                        <td><button  class="btn-primary">BOOK NOW</button></td>
+                        <td><button type="button" class="btn-primary" data-toggle="modal" data-target="#bookmodal">BOOK NOW</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-
-<script>
-    $(document).ready(function () {
-        $('button').on('click', function () {
-            $('.center').show();
-            $(this).hide();
-        })
-
-        $('#close').on('click', function () {
-            $('.center').hide();
-            $('button').show();
-        })
-    });
-</script>
+                        <!-- BOOK NOW MODAL -->
+                        <div class="modal fade" id="bookmodal" tabindex="-1" role="dialog" aria-labelledby="bookmodallabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bookmodallabel">BOOK NOW</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="" class="form-group">
+                Enter Date:
+                <input type="date" name="bdate" value="" class="form-control">
+                <br>
+                Enter Time:
+                <input type="time" name="btime" value="" class="form-control">
+            </form>
+        </div>
+        <div class="modal-footer">
+        <form action="">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Book</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
 @endsection

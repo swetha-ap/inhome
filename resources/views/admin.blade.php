@@ -256,7 +256,7 @@
                     </div>
                     <div class="card-action text-info text-center mt-2">
                         <h1>2</h1>
-                        <a href="#" style="color: blue;">Click here</a>
+                        <!-- <a href="#" style="color: blue;">Click here</a> -->
                     </div>
                 </div>
             </div>
@@ -270,7 +270,7 @@
                     </div>
                     <div class="card-action text-success text-center mt-2">
                         <h1>3</h1>
-                        <a href="#" style="color: green;">Click here</a>
+                        <!-- <a href="#" style="color: green;">Click here</a> -->
                     </div>
                 </div>
             </div>
@@ -287,7 +287,7 @@
                     </div>
                     <div class="card-action text-danger text-center mt-2">
                         <h1>5</h1>
-                        <a href="#" style="color: red;">Click here</a>
+                        <!-- <a href="#" style="color: red;">Click here</a> -->
                     </div>
                 </div>
             </div>
@@ -301,7 +301,7 @@
                     </div>
                     <div class="card-action text-warning text-center mt-2">
                         <h1>5</h1>
-                        <a href="#" style="color: yellow;">Click here</a>
+                        <!-- <a href="#" style="color: yellow;">Click here</a> -->
                     </div>
                 </div>
             </div>

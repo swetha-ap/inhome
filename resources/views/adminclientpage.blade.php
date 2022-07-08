@@ -45,6 +45,9 @@
                         <th class="th-sm">Join date
 
                         </th>
+                        <th class="th-sm">Profile Status
+
+                        </th>
                         <th class="th-sm">Action
 
                         </th>
@@ -57,7 +60,10 @@
                         <td>61</td>
                         <td>Bangalore</td>
                         <td>2022/04/25</td>
-                        <td><button class="btn-success">ACCEPT</button> <button class="btn-danger">REMOVE</button></td>
+                        <td><button class="btn-success disabled">ACTIVE</button></td>
+                        <td>
+                        <!-- <button class="btn-success">ACCEPT</button>  -->
+                        <button class="btn-danger">REMOVE</button></td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -65,6 +71,7 @@
                         <td>63</td>
                         <td>Chennai</td>
                         <td>2022/07/25</td>
+                        <td><button class="btn-warning disabled">PENDING..</button></td>
                         <td><button class="btn-success">ACCEPT</button> <button class="btn-danger">REMOVE</button></td>
                     </tr>
                     <tr>
@@ -73,7 +80,10 @@
                         <td>66</td>
                         <td>Kochi</td>
                         <td>2022/01/12</td>
-                        <td><button class="btn-success">ACCEPT</button> <button class="btn-danger">REMOVE</button></td>
+                        <td><button class="btn-danger disabled">DECLINED</button></td>
+                        <td><button class="btn-success">ACCEPT</button> 
+                        <!-- <button class="btn-danger">REMOVE</button> -->
+                    </td>
                     </tr>
                     <tr>
                         <td>4</td>
@@ -81,6 +91,7 @@
                         <td>40</td>
                         <td>Calicut</td>
                         <td>2022/07/13</td>
+                        <td><button class="btn-warning disabled">PENDING..</button></td>
                         <td><button class="btn-success">ACCEPT</button> <button class="btn-danger">REMOVE</button></td>
                     </tr>
                 </tbody>

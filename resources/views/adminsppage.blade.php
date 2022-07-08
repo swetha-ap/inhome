@@ -51,6 +51,9 @@
                         <th class="th-sm">Service Charge
                             <i class="fas fa-rupee-sign"></i>
                         </th>
+                        <th class="th-sm">Profile Status
+
+                        </th>
                         <th class="th-sm">Action
 
                         </th>
@@ -65,6 +68,7 @@
                         <td>Bangalore</td>
                         <td>2022/04/25</td>
                         <td>200</td>
+                        <td><button class="btn-warning disabled">PENDING..</button></td>
                         <td><button class="btn-success">ACCEPT</button> <button class="btn-danger">REMOVE</button></td>
                     </tr>
                     <tr>
@@ -75,7 +79,10 @@
                         <td>Chennai</td>
                         <td>2022/07/25</td>
                         <td>350</td>
-                        <td><button class="btn-success">ACCEPT</button> <button class="btn-danger">REMOVE</button></td>
+                        <td><button class="btn-danger disabled">DECLINED</button></td>
+                        <td><button class="btn-success">ACCEPT</button> 
+                        <!-- <button class="btn-danger">REMOVE</button> -->
+                    </td>
                     </tr>
                     <tr>
                         <td>SP3</td>
@@ -85,7 +92,11 @@
                         <td>Kochi</td>
                         <td>2022/01/12</td>
                         <td>200</td>
-                        <td><button class="btn-success">ACCEPT</button> <button class="btn-danger">REMOVE</button></td>
+                        <td><button class="btn-success disabled">ACTIVE</button></td>
+                        <td>
+                        <!-- <button class="btn-success">ACCEPT</button>  -->
+                        <button class="btn-danger">REMOVE</button>
+                    </td>
                     </tr>
                 </tbody>
             </table>
