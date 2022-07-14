@@ -32,12 +32,18 @@ route::view('cp' , 'customerprofile')->name('customerprofile');
 route::view('ce' , 'customereditprofile')->name('customereditprofile');
 route::view('cb' , 'customerbooking')->name('customerbooking');
 route::view('cub', 'customerbooklist')->name('customerbooklist');
+route::view('cpb', 'customerpendingbooking')->name('customerpendingbooking');
+route::view('cab', 'customeracceptedbooking')->name('customeracceptedbooking');
+route::view('cdb', 'customerdeclinedbooking')->name('customerdeclinedbooking');
+
 
 // service provider
 
 route::view('ss' , 'signupservice')->name('signupservice');
 route::view('sh' , 'serviceproviderhome')->name('serviceproviderhome');
 route::view('sb' , 'servicebookings')->name('servicebookings');
+route::view('snb', 'serviceprovidernewbooking')->name('spnewbooking');
+route::view('sdb', 'serviceproviderdeclinedbookings')->name('spdeclinedbooking');
 route::view('sm' , 'serviceprovidermaster');
 route::view('sp' , 'serviceproviderprofile')->name('serviceproviderprofile');
 route::view('se' , 'serviceprovidereditprofile')->name('serviceprovidereditprofile');

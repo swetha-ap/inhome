@@ -100,7 +100,7 @@
                         <td>Bangalore</td>
                         <td>2022/04/25</td>
                         <td>08:00am</td>
-                        <td><button class="btn-info disabled">ACCEPTED</button> </td>
+                        <td><button class="btn-success disabled">COMPLETED</button></td>
                         <td><div class="rating">
         <i class="rating__star far fa-star"></i>
         <i class="rating__star far fa-star"></i>
@@ -116,7 +116,7 @@
                         <td>Chennai</td>
                         <td>2022/07/25</td>
                         <td>13:50pm</td>
-                        <td><button class="btn-danger disabled">DECLINED</button></td>
+                        <td><button class="btn-info disabled">ACCEPTED</button> </td>
                         <td><div class="rating">
         <i class="rating__star far fa-star"></i>
         <i class="rating__star far fa-star"></i>
@@ -132,7 +132,7 @@
                         <td>Kochi</td>
                         <td>2022/01/12</td>
                         <td>17:00pm</td>
-                        <td><button class="btn-warning disabled">PENDING..</button></td>
+                        <td><button class="btn-info disabled">ACCEPTED</button> </td>
                         <td><div class="rating">
         <i class="rating__star far fa-star"></i>
         <i class="rating__star far fa-star"></i>
