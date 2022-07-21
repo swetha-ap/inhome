@@ -1,0 +1,29 @@
+.show-result {
+    margin: 10px;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+  }
+  
+  .star-rating s:hover,
+  .star-rating s.active {
+      color: yellow;
+  }
+  .star-rating s {
+      color: black;
+      font-size: 50px;
+      cursor: default;
+      text-decoration: none;
+      line-height: 50px;
+  }
+  .star-rating {
+      padding: 2px;
+  }
+  .star-rating s:hover:before,
+  .star-rating s.rated:before,
+  .star-rating s.active:before {
+      content: "\2605";
+  }
+  .star-rating s:before {
+      content: "\2606";
+  }
