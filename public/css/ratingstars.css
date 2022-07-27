@@ -1,29 +1,23 @@
-.show-result {
-    margin: 10px;
-    padding: 10px;
-    color: black;
-    font-size: 20px;
+
+  .stars {
+    font-size: 0;
   }
   
-  .star-rating s:hover,
-  .star-rating s.active {
-      color: yellow;
+  .stars p {
+      font-size: 20px;
+      padding: 3px;
   }
-  .star-rating s {
-      color: black;
-      font-size: 50px;
-      cursor: default;
-      text-decoration: none;
-      line-height: 50px;
+  
+  .stars i {
+    font-size: 26px;
+    padding: 3px;
   }
-  .star-rating {
-      padding: 2px;
+  
+  .stars:hover i,
+  .stars:not(:hover) .active{
+    color: yellow;
   }
-  .star-rating s:hover:before,
-  .star-rating s.rated:before,
-  .star-rating s.active:before {
-      content: "\2605";
-  }
-  .star-rating s:before {
-      content: "\2606";
+  
+  .stars:hover i:hover ~ i {
+    color: inherit;
   }

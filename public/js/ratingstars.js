@@ -1,14 +1,23 @@
-$(function() {
-    $("div.star-rating > s").on("click", function(e) {
-    
-    // remove all active classes first, needed if user clicks multiple times
-    $(this).closest('div').find('.active').removeClass('active');
+$().ready(function(){
+    let ratings = document.querySelectorAll(".ratings");
 
-    $(e.target).parentsUntil("div").addClass('active'); // all elements up from the clicked one excluding self
-    $(e.target).addClass('active');  // the element user has clicked on
-
-
-        var numStars = $(e.target).parentsUntil("div").length+1;
-        $('.show-result ').text(numStars);
+ratings.forEach ((rating)=>{
+  let stars = rating.querySelectorAll(".stars .fa");
+  let result = rating.querySelector('.result');
+  stars.forEach( star => {
+    star.addEventListener("click", function () {
+        const num = Number(this.dataset.star);
+        result.innerText = num;
+        stars.forEach( (item,index) => {
+            if((index+1) <= num){
+              item.className = "fa fa-star";
+              item.style.color = "yellow";
+            }else{
+              item.className = "fa fa-star-o";
+              item.style.color = "black";
+            }
+        })
     });
-});
+  });
+})
+})
