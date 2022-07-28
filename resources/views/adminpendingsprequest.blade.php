@@ -26,6 +26,7 @@
         <!-- <div class="container"> -->
         <div class="col-md-1"></div>
         <div class="col-md-11">
+            <h1>PENDING REQUESTS</h1><br /><br />
             <table id="sptable" class="table table-striped table-bordered table-sm display" cellspacing="0"
                 width="100%">
                 <thead>
@@ -65,9 +66,7 @@
                         <td>Bangalore</td>
                         <td>2022/04/25</td>
                         <td>200</td>
-                        <td>
-                            <button class="btn-danger">REMOVE</button>
-                        </td>
+                        <td><button class="btn-success">ACCEPT</button> <button class="btn-danger">REMOVE</button></td>
                     </tr>
                     <tr>
                         <td>SP2</td>
@@ -77,19 +76,7 @@
                         <td>Chennai</td>
                         <td>2022/07/25</td>
                         <td>350</td>
-                        <td>
-                        <button class="btn-danger">REMOVE</button>
-                    </td>
-                    </tr>
-                    <tr>
-                        <td>SP3</td>
-                        <td>GHI</td>
-                        <td>Cook</td>
-                        <td>66</td>
-                        <td>Kochi</td>
-                        <td>2022/01/12</td>
-                        <td>200</td>
-                        <td>
+                        <td><button class="btn-success">ACCEPT</button> 
                         <button class="btn-danger">REMOVE</button>
                     </td>
                     </tr>

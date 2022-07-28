@@ -1,158 +1,86 @@
-@extends('customermaster')
+@extends('adminmaster')
 @section('content')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="{{ asset ('js/ratingstars.js') }}"></script>
-<link rel="stylesheet" href="{{ asset ('css/ratingstars.css') }}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- Datatable plugin CSS file -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
-
-<!-- jQuery library file -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js">
-</script>
-
-<!-- Datatable plugin JS library file -->
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-<style>
-    .table td {
-        text-align: center;
-    }
-
-    .table th {
-        text-align: center;
-        background-color: rgb(17, 17, 80);
-        color: white;
-    }
-</style>
-<div class="container">
-  <br><br>
-  <h1 align="center">My Bookings</h1>
+<div class="container form-group">
+    <br><br>
+    <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-4">
+            <h1>Manage Services</h1>
+        </div>
+    </div>
     <br><br><br>
     <div class="row">
-        <!-- <div class="container"> -->
         <div class="col-md-1"></div>
-        <div class="col-md-11">
-            <table id="booking" class="table table-striped table-bordered table-sm display" cellspacing="0"
-                width="100%">
+        <div class="col-md-2">
+            <form action="">
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addservices">Add Service</button>
+            </form>
+        </div>
+        <div class="col-md-2">
+            <form action="">
+                <button type="button" class="btn btn-info" id="manage">Manage Service</button>
+            </form>
+        </div>
+    </div>
+   <br><br><br>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-8">
+            <table class="table table-bordered table-hover table-dark" id="servicetable" style="display: none;">
                 <thead>
-                    <tr>
-                        <th class="th-sm">SNo
-
-                        </th>
-                        <th class="th-sm">Service Provider Name
-
-                        </th>
-                        <th class="th-sm">Service
-
-                        </th>
-                        <th class="th-sm">Place
-
-                        </th>
-                        <th class="th-sm">Date
-
-                        </th>
-                        <th class="th-sm">Time
-                        </th>
-                        <th class="th-sm">Status
-
-                        </th>
-                        <th class="th-sm">Rating
-
-                        </th>
-                    </tr>
+                    <th>Services Provided</th>
+                    <th>Action</th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>ABC</td>
-                        <td>Maid</td>
-                        <td>Bangalore</td>
-                        <td>2022/04/25</td>
-                        <td>08:00am</td>
-                        <td><button class="btn-success disabled">COMPLETED</button></td>
-                        <td>
-                            <div class="ratings">
-                                <span class="stars">
-                                  <i class="fa fa-star-o" data-star="1"></i>
-                                  <i class="fa fa-star-o" data-star="2"></i>
-                                  <i class="fa fa-star-o" data-star="3"></i>
-                                  <i class="fa fa-star-o" data-star="4"></i>
-                                  <i class="fa fa-star-o" data-star="5"></i> </span
-                                ><br />
-                                <b class="result"></b>
-                              </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>DEF</td>
-                        <td>Cook</td>
-                        <td>Chennai</td>
-                        <td>2022/07/25</td>
-                        <td>13:50pm</td>
-                        <td><button class="btn-info disabled">ACCEPTED</button> </td>
-                        <td> <div class="ratings">
-                            <span class="stars">
-                              <i class="fa fa-star-o" data-star="1"></i>
-                              <i class="fa fa-star-o" data-star="2"></i>
-                              <i class="fa fa-star-o" data-star="3"></i>
-                              <i class="fa fa-star-o" data-star="4"></i>
-                              <i class="fa fa-star-o" data-star="5"></i> </span
-                            ><br />
-                            <b class="result"></b>
-                          </div></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>GHI</td>
-                        <td>Babysitter</td>
-                        <td>Kochi</td>
-                        <td>2022/01/12</td>
-                        <td>17:00pm</td>
-                        <td><button class="btn-info disabled">ACCEPTED</button> </td>
-                        <td>
-                            <div class="ratings">
-                                <span class="stars">
-                                  <i class="fa fa-star-o" data-star="1"></i>
-                                  <i class="fa fa-star-o" data-star="2"></i>
-                                  <i class="fa fa-star-o" data-star="3"></i>
-                                  <i class="fa fa-star-o" data-star="4"></i>
-                                  <i class="fa fa-star-o" data-star="5"></i> </span
-                                ><br />
-                                <b class="result"></b>
-                              </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>IJK</td>
-                        <td>Babysitter</td>
-                        <td>Kochi</td>
-                        <td>2022/01/12</td>
-                        <td>17:00pm</td>
-                        <td><button class="btn-success disabled">COMPLETED</button></td>
-                        <td>
-                            <div class="ratings">
-                                <span class="stars">
-                                  <i class="fa fa-star-o" data-star="1"></i>
-                                  <i class="fa fa-star-o" data-star="2"></i>
-                                  <i class="fa fa-star-o" data-star="3"></i>
-                                  <i class="fa fa-star-o" data-star="4"></i>
-                                  <i class="fa fa-star-o" data-star="5"></i> </span
-                                ><br />
-                                <b class="result"></b>
-                              </div>
-                        </td>
-                    </tr>
-                </tbody>
+                 <tr>
+                    <td>Maid</td>
+                    <td><button class="btn btn-secondary">REMOVE</button></td>
+                 </tr>
+                 <tr>
+                    <td>Baby Sitter</td>
+                    <td><button class="btn btn-secondary">REMOVE</button></td>
+                 </tr>
+                 <tr>
+                    <td>Cook</td>
+                    <td><button class="btn btn-secondary">REMOVE</button></td>
+                 </tr>
+               </tbody>   
             </table>
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function () {
-        $('#booking').DataTable({});
-    })
-</script>
+ 
+                                   <!-- ADD SERVICES MODAL  -->
+<div class="modal fade" id="addservices" tabindex="-1" role="dialog" aria-labelledby="bookmodallabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bookmodallabel">ADD SERVICES</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="" class="form-group">
+                Enter Service:
+                <input type="text" name="newservice" value="" class="form-control">
+            </form>
+        </div>
+        <div class="modal-footer">
+        <form action="">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $().ready(function(){
+        $('#manage').click(function(){
+            $('#servicetable').show();
+            // $('#servicetable').toggle();
+        })
+     })
+  </script>
 @endsection

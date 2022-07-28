@@ -57,5 +57,7 @@ route::view('asp' , 'adminsppage')->name('adminsppage');
 route::view('ac' , 'adminclientpage')->name('adminclientpage');
 route::view('am' , 'adminmanage')->name('adminmanage');
 route::view('ab' , 'adminbooking')->name('adminbooking');
+route::view('apr' , 'adminpendingsprequest')->name('adminpendingsprequest');
+route::view('apc' , 'adminpendingclientrequest')->name('adminpendingclientrequest');
 
 route::view('t' , 'trial1');

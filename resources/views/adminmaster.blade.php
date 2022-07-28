@@ -199,12 +199,12 @@
                         <span class="item">Clients</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="{{ route ('adminbooking') }}">
                         <span class="icon"><i class="fas fa-list-alt"></i></span>
                         <span class="item">Bookings</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="{{ route ('adminmanage') }}">
                         <span class="icon"><i class="fas fa-tag"></i></span>

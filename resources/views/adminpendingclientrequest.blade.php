@@ -26,17 +26,14 @@
         <!-- <div class="container"> -->
         <div class="col-md-1"></div>
         <div class="col-md-11">
-            <table id="sptable" class="table table-striped table-bordered table-sm display" cellspacing="0"
+            <table id="custable" class="table table-striped table-bordered table-sm display" cellspacing="0"
                 width="100%">
                 <thead>
                     <tr>
-                        <th class="th-sm">SP Id
+                        <th class="th-sm">SNo
 
                         </th>
                         <th class="th-sm">Name
-
-                        </th>
-                        <th class="th-sm">Speciality
 
                         </th>
                         <th class="th-sm">Age
@@ -45,11 +42,8 @@
                         <th class="th-sm">Place
 
                         </th>
-                        <th class="th-sm">Start date
+                        <th class="th-sm">Join date
 
-                        </th>
-                        <th class="th-sm">Service Charge
-                            <i class="fas fa-rupee-sign"></i>
                         </th>
                         <th class="th-sm">Action
 
@@ -58,38 +52,32 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>SP1</td>
+                        <td>1</td>
                         <td>ABC</td>
-                        <td>Maid</td>
                         <td>61</td>
                         <td>Bangalore</td>
                         <td>2022/04/25</td>
-                        <td>200</td>
                         <td>
+                        <button class="btn-success">ACCEPT</button> 
+                        <button class="btn-danger">REMOVE</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>DEF</td>
+                        <td>63</td>
+                        <td>Chennai</td>
+                        <td>2022/07/25</td>
+                        <td><button class="btn-success">ACCEPT</button> 
                             <button class="btn-danger">REMOVE</button>
                         </td>
                     </tr>
                     <tr>
-                        <td>SP2</td>
-                        <td>DEF</td>
-                        <td>Babysitter</td>
-                        <td>63</td>
-                        <td>Chennai</td>
-                        <td>2022/07/25</td>
-                        <td>350</td>
-                        <td>
-                        <button class="btn-danger">REMOVE</button>
-                    </td>
-                    </tr>
-                    <tr>
-                        <td>SP3</td>
+                        <td>3</td>
                         <td>GHI</td>
-                        <td>Cook</td>
                         <td>66</td>
                         <td>Kochi</td>
                         <td>2022/01/12</td>
-                        <td>200</td>
-                        <td>
+                        <td><button class="btn-success">ACCEPT</button> 
                         <button class="btn-danger">REMOVE</button>
                     </td>
                     </tr>
@@ -100,7 +88,7 @@
 </div>
 <script>
     $(document).ready(function () {
-        $('#sptable').DataTable({});
+        $('#custable').DataTable({});
     });
 </script>
 @endsection
