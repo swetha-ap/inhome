@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // web home
-route::view('/' , 'master');
-route::view('h' , 'home')->name('home');
+
+route::view('/' , 'home')->name('home');
 route::view('a' , 'about')->name('about');
 route::view('l' , 'login')->name('login');
 route::view('s' , 'service')->name('service');
@@ -56,7 +56,7 @@ route::view('ae' , 'admineditprofile')->name('admineditprofile');
 route::view('asp' , 'adminsppage')->name('adminsppage');
 route::view('ac' , 'adminclientpage')->name('adminclientpage');
 route::view('am' , 'adminmanage')->name('adminmanage');
-route::view('ab' , 'adminbooking')->name('adminbooking');
+// route::view('ab' , 'adminbooking')->name('adminbooking');
 route::view('apr' , 'adminpendingsprequest')->name('adminpendingsprequest');
 route::view('apc' , 'adminpendingclientrequest')->name('adminpendingclientrequest');
 
